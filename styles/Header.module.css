@@ -1,0 +1,128 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.headeractive {
+  width: 100%;
+  height: 100px;
+  top: 0;
+  position: sticky;
+  background-color: var(--grey-color);
+  z-index: 1;
+  transition: 2s ease;
+}
+
+.headercontent {
+  max-width: 1100px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.headercontent nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+.headercontent nav ul li a {
+  color: var(--light-color);
+}
+
+.headercontent button a {
+  color: var(--light-color);
+}
+
+.headeractive a {
+  color: var(--light-color);
+}
+
+.headeractive .headercontent button a {
+  color: var(--dark-color);
+}
+
+.headercontent button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: letter-spacing 1s;
+  font-family: 'Poppins';
+  font-weight: 500;
+  background: #333;
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+
+.headercontent button:hover {
+  background: var(--grey-color);
+  border: none;
+  letter-spacing: 3px;
+  transition: 2s ease;
+}
+
+.headeractive .headercontent button {
+  background-color: var(--light-color);
+  color: #333;
+  border: 1px solid var(--light-color);
+  letter-spacing: 2px;
+}
+
+.headeractive .headercontent button:hover {
+  background-color: transparent;
+  color: var(--light-color);
+  letter-spacing: 3px;
+  transition: 2s ease;
+}
+
+.logo {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .header,
+  .headeractive {
+    padding: 10px 20px;
+  }
+
+  .headercontent a {
+    font-size: 16px;
+  }
+
+  .headercontent nav ul li {
+    margin-left: 15px;
+  }
+
+  .headercontent button {
+    width: 90px;
+    height: 35px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .headercontent .logo {
+    font-size: 1.6rem;
+  }
+
+  .header button {
+    display: none;
+  }
+
+  .headeractive button {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .headercontent {
+    max-width: 900px;
+  }
+}
